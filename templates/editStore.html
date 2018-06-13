@@ -1,0 +1,18 @@
+<html>
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/1E570167-B8D8-774C-8F50-FEEF4491E7B2/main.js" charset="UTF-8"></script>
+</head>
+<body>
+	<form action="/login" method="get">
+		<button type="submit">Logout</button>	
+	</form>
+<h1> Edit Store </h1>
+<form action="{{ url_for('editStore',store_id = store.id)}}" method = 'post'>
+	<p>Name:</p>
+		<input type ='text' size='30' name='name' placeholder = '{{store.name }}'>
+<input type='submit' value='Edit'>
+<a href = '{{url_for('showStores')}}'> Cancel </a>
+</form>
+</body>
+</html>

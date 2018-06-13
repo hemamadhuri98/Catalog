@@ -1,0 +1,50 @@
+<html>
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+<<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/1E570167-B8D8-774C-8F50-FEEF4491E7B2/main.js" charset="UTF-8"></script>
+</head>
+<body>
+		<h1> Edit Ornament </h1>
+		<form action="/login" method="get">
+		<button type="submit">Logout</button>	
+	</form>
+	
+<form action="#" method = 'post'>
+	<p>Name:</p>
+		<input type ='text' size='30' name='name' placeholder = '{{details.name }}'>
+	<p>Description:</p>
+		<input type ='text' size='30' name='description' placeholder = '{{details.description}}'>
+	<p>Price:</p>
+		<input type ='text' size='30' name='price' placeholder = '{{details.price}}'>
+	<p>Ornamenttype:<p>
+	{% if details.ornamenttype == 'Gold' %}
+		<dd><input type ='radio' name='ornamenttype' value='Gold'checked >Gold</dd>
+	{%else%}
+	<dd><input type ='radio' name='ornamenttype' value='Gold' >Gold</dd>
+    {% endif %}
+    {% if details.ornamenttype == 'Platinum' %}
+       <dd><input type ='radio' name='ornamenttype' value='Platinum' checked>Platinum</dd>
+    {%else%}
+		<dd><input type ='radio' name='ornamenttype' value='Platinum'>Platinum</dd>
+    {% endif %}
+	{% if details.ornamenttype == 'Silver'%}
+		<dd><input type ='radio' name='ornamenttype' value='Silver'checked >Silver</dd>
+	{% else %}
+	   <dd><input type ='radio' name='ornamenttype' value='Silver'>Silver</dd>
+	{% endif %}
+	
+
+
+	
+
+
+
+<input type='submit' value='Edit'>
+
+
+<a href = '#'> Cancel </a>
+
+
+</form>
+</body>
+</html>
