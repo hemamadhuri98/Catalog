@@ -277,9 +277,8 @@ def editStore(store_id):
     editStore = session3.query(Store).filter_by(id=store_id).one()
     if 'username' not in login_session:
         return redirect('/login')
-        if editStore.user_id != login_session['user_id']:
-            if editStore.user_id != login_session['user_id']:
-                return "<script>function myFunction() {alert('You \
+    if editStore.user_id != login_session['user_id']:
+        return "<script>function myFunction() {alert('You \
             are not authorized to edit this Store.\
             Please create your own entry in order \
             to edit/delete.');}</script><body onload='myFunction()'>"
